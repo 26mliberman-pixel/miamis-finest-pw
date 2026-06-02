@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coastal Shine — Pressure Washing Miami | Free Quote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b2545; --blue:#1d6fb8; --aqua:#27c4d9; --ink:#0f172a;
+    --slate:#475569; --bg:#f6fafd; --white:#fff; --line:#e2e8f0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  a{text-decoration:none;color:inherit}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-weight:800;font-size:20px;display:flex;align-items:center;gap:9px;color:var(--navy)}
+  .logo .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--aqua));display:grid;place-items:center;color:#fff;font-size:16px}
+  .nav-links{display:flex;gap:30px;align-items:center;font-weight:500;font-size:15px;color:var(--slate)}
+  .nav-links a:hover{color:var(--blue)}
+  .btn{background:linear-gradient(135deg,var(--blue),var(--aqua));color:#fff;padding:13px 22px;border-radius:10px;font-weight:700;font-size:15px;display:inline-block;border:none;cursor:pointer;transition:.2s;box-shadow:0 6px 18px rgba(29,111,184,.28)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(29,111,184,.36)}
+  .btn-ghost{background:transparent;color:var(--navy);box-shadow:none;border:1.5px solid var(--line)}
+  @media(max-width:780px){.nav-links{display:none}}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(135deg,#0b2545 0%,#1d6fb8 60%,#27c4d9 100%);color:#fff;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.18),transparent 45%)}
+  .hero .wrap{position:relative;z-index:2;padding:90px 24px 100px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);padding:7px 14px;border-radius:99px;font-size:13px;font-weight:600;margin-bottom:22px}
+  .hero h1{font-size:54px;line-height:1.08;font-weight:800;letter-spacing:-1px}
+  .hero h1 span{color:#bdf3fb}
+  .hero p{font-size:19px;opacity:.92;margin:20px 0 30px;max-width:520px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .trust{display:flex;gap:26px;margin-top:34px;font-size:14px;opacity:.9}
+  .trust b{display:block;font-size:24px;font-weight:800}
+  .hero-card{background:#fff;color:var(--ink);border-radius:18px;padding:28px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+  .hero-card h3{font-size:20px;margin-bottom:6px;color:var(--navy)}
+  .hero-card .sub{color:var(--slate);font-size:14px;margin-bottom:18px}
+  .field{margin-bottom:13px}
+  .field label{font-size:13px;font-weight:600;color:var(--slate);display:block;margin-bottom:5px}
+  .field input,.field select{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:9px;font-size:15px;font-family:inherit}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--blue)}
+  @media(max-width:880px){.hero .wrap{grid-template-columns:1fr;padding:60px 24px}.hero h1{font-size:38px}}
+
+  /* LOGOS / STRIP */
+  .strip{background:var(--bg);padding:22px 0;border-bottom:1px solid var(--line)}
+  .strip .wrap{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;color:var(--slate);font-weight:600;font-size:14px;align-items:center}
+  .strip .star{color:#f5a623}
+
+  /* SERVICES */
+  section{padding:80px 0}
+  .eyebrow{color:var(--blue);font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;text-align:center}
+  h2{font-size:38px;font-weight:800;text-align:center;margin:10px 0 14px;color:var(--navy);letter-spacing:-.5px}
+  .lead{text-align:center;color:var(--slate);font-size:18px;max-width:620px;margin:0 auto 50px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;transition:.25s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(11,37,69,.1);border-color:transparent}
+  .card .ic{width:54px;height:54px;border-radius:13px;background:linear-gradient(135deg,#e8f6fb,#d4eefc);display:grid;place-items:center;font-size:26px;margin-bottom:18px}
+  .card h3{font-size:20px;color:var(--navy);margin-bottom:8px}
+  .card p{color:var(--slate);font-size:15px}
+  @media(max-width:880px){.grid{grid-template-columns:1fr}h2{font-size:30px}}
+
+  /* BEFORE/AFTER */
+  .ba{background:var(--bg)}
+  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+  .ba-card{border-radius:16px;overflow:hidden;position:relative;height:300px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:22px;letter-spacing:1px}
+  .before{background:linear-gradient(135deg,#6b7280,#374151)}
+  .after{background:linear-gradient(135deg,var(--blue),var(--aqua))}
+  .ba-card span{position:absolute;top:16px;left:16px;background:rgba(0,0,0,.35);padding:6px 14px;border-radius:99px;font-size:13px;letter-spacing:1px}
+  @media(max-width:880px){.ba-grid{grid-template-columns:1fr}}
+
+  /* TESTIMONIALS */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+  .quote{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}
+  .quote .stars{color:#f5a623;margin-bottom:12px}
+  .quote p{font-size:15px;color:var(--ink);margin-bottom:18px}
+  .who{display:flex;align-items:center;gap:12px}
+  .who .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--aqua));color:#fff;display:grid;place-items:center;font-weight:700}
+  .who b{display:block;font-size:15px}.who small{color:var(--slate)}
+  @media(max-width:880px){.quotes{grid-template-columns:1fr}}
+
+  /* CTA BANNER */
+  .cta{background:linear-gradient(135deg,#0b2545,#1d6fb8);color:#fff;border-radius:24px;text-align:center;padding:60px 30px;margin:0 24px}
+  .cta h2{color:#fff}
+  .cta p{opacity:.9;font-size:18px;margin-bottom:28px}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:#cbd5e1;padding:50px 0 30px;margin-top:80px}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:30px}
+  footer .logo{color:#fff}
+  footer h4{color:#fff;font-size:15px;margin-bottom:12px}
+  footer a{display:block;color:#cbd5e1;font-size:14px;margin-bottom:8px}
+  footer a:hover{color:#fff}
+  .copy{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:13px;text-align:center;color:#94a3b8}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="logo"><div class="dot">✦</div> Coastal Shine</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#quote">Contact</a>
+        <a href="#quote" class="btn">Get a Free Quote</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="badge">⭐ Miami's 5-Star Rated Pressure Washing</div>
+      <h1>Make your property look <span>brand new</span> again.</h1>
+      <p>Professional pressure washing for driveways, roofs, pool decks & exteriors across Miami-Dade. Licensed, insured, and 100% satisfaction guaranteed.</p>
+      <div class="hero-cta">
+        <a href="#quote" class="btn">Get My Free Quote →</a>
+        <a href="tel:3055551234" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.4)">📞 (305) 555-1234</a>
+      </div>
+      <div class="trust">
+        <div><b>500+</b>Homes cleaned</div>
+        <div><b>4.9★</b>Google rating</div>
+        <div><b>24hr</b>Fast response</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Get a free quote in 60 seconds</h3>
+      <div class="sub">No obligation. We reply within 1 hour.</div>
+      <div class="field"><label>Your Name</label><input placeholder="John Smith"></div>
+      <div class="field"><label>Phone Number</label><input placeholder="(305) 555-0000"></div>
+      <div class="field"><label>What needs cleaning?</label>
+        <select><option>Driveway & Walkway</option><option>Roof</option><option>Pool Deck / Patio</option><option>Whole House Exterior</option></select>
+      </div>
+      <button class="btn" style="width:100%;margin-top:6px">Send My Free Quote</button>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div><span class="star">★★★★★</span> 4.9 on Google</div>
+    <div>✓ Licensed & Insured</div>
+    <div>✓ Same-Week Service</div>
+    <div>✓ Satisfaction Guaranteed</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">What We Do</div>
+    <h2>Our Pressure Washing Services</h2>
+    <p class="lead">From grimy driveways to algae-covered roofs — we restore every surface to like-new condition.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🏠</div><h3>House Washing</h3><p>Soft-wash siding, stucco & walls that lifts dirt, mold and mildew without damage.</p></div>
+      <div class="card"><div class="ic">🚗</div><h3>Driveways & Concrete</h3><p>Blast away oil stains, grime and gum. Your driveway will look freshly poured.</p></div>
+      <div class="card"><div class="ic">🏖️</div><h3>Pool Decks & Patios</h3><p>Safe, slip-free cleaning for pavers, travertine and pool surrounds.</p></div>
+      <div class="card"><div class="ic">🏘️</div><h3>Roof Cleaning</h3><p>Remove black streaks and algae to protect your roof and boost curb appeal.</p></div>
+      <div class="card"><div class="ic">🧱</div><h3>Paver Sealing</h3><p>Seal and protect your pavers so they stay vibrant and weed-free for years.</p></div>
+      <div class="card"><div class="ic">🏢</div><h3>Commercial</h3><p>Storefronts, parking lots and HOA properties on a recurring schedule.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="ba" id="work">
+  <div class="wrap">
+    <div class="eyebrow">See The Difference</div>
+    <h2>Before & After</h2>
+    <p class="lead">Real results from real Miami homes. Slide your eyes from grime to gleam.</p>
+    <div class="ba-grid">
+      <div class="ba-card before"><span>BEFORE</span>Dirty &amp; Stained</div>
+      <div class="ba-card after"><span>AFTER</span>Spotless &amp; Bright</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Happy Customers</div>
+    <h2>What Miami Says About Us</h2>
+    <div class="quotes">
+      <div class="quote"><div class="stars">★★★★★</div><p>"My driveway looks brand new. They showed up on time, were super professional, and the price was fair. Highly recommend!"</p><div class="who"><div class="av">MR</div><div><b>Maria R.</b><small>Coral Gables</small></div></div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Booked online, got a quote within the hour, and my whole house exterior was done the next day. Incredible service."</p><div class="who"><div class="av">JL</div><div><b>James L.</b><small>Brickell</small></div></div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"The roof streaks are completely gone. Our home looks 10 years younger. Will be using them every year from now on."</p><div class="who"><div class="av">SC</div><div><b>Sofia C.</b><small>Pinecrest</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="quote" style="padding-top:0">
+  <div class="cta">
+    <h2>Ready for a property that turns heads?</h2>
+    <p>Get your free, no-obligation quote today. We respond within the hour.</p>
+    <a href="tel:3055551234" class="btn" style="background:#fff;color:var(--navy)">📞 Call (305) 555-1234</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="max-width:280px">
+        <div class="logo"><div class="dot">✦</div> Coastal Shine</div>
+        <p style="margin-top:12px;font-size:14px">Miami's trusted pressure washing pros. Licensed, insured & 5-star rated.</p>
+      </div>
+      <div><h4>Services</h4><a href="#">House Washing</a><a href="#">Driveways</a><a href="#">Roof Cleaning</a><a href="#">Commercial</a></div>
+      <div><h4>Company</h4><a href="#">About Us</a><a href="#">Reviews</a><a href="#">Service Areas</a><a href="#">Contact</a></div>
+      <div><h4>Contact</h4><a href="tel:3055551234">(305) 555-1234</a><a href="#">hello@coastalshine.com</a><a href="#">Miami-Dade, FL</a></div>
+    </div>
+    <div class="copy">© 2026 Coastal Shine Pressure Washing. All rights reserved. · Built by [Your Agency Name]</div>
+  </div>
+</footer>
+
+</body>
+</html>
